@@ -4,4 +4,12 @@ An input string is valid if:
 
     1. Open brackets must be closed by the same type of brackets.
     2. Open brackets must be closed in the correct order.
+
+Input: s = "()[]{}"
+Output: true
 """
+
+class Solution:
+    def isValid(s: str) -> bool:
+        stack = []
+        
