@@ -17,7 +17,7 @@ class Solution:
 
 assert Solution.twoSum([2,7,8,9], 10) == [0,2]
 
-#....0(n) solution --> Hashmap
+#...0(n) solution --> Hashmap
 class Solution:
     def twoSum(nums, target):
         hashMap = {}
