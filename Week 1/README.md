@@ -13,7 +13,7 @@ It should be noted that all these operations are performed at constant time `0(1
 
 There is limited memory allocated to a stack and checks should be done to be sure there is enough space in a stack before a new item is added
 
-### Implementations in Python
+### Implementation in Python
 ```python
 import collections.deque as deque
 stack = deque()
