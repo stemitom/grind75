@@ -16,33 +16,47 @@ It should be noted that all these operations are performed at constant time `0(1
 
 There is limited memory allocated to a stack and checks should be done to be sure there is enough space in a stack before a new item is added
 
-### Implementation in Python
+
+
+## Implementation in Python
 ```python
 import collections.deque as deque
 stack = deque()
-
-#...Pushing elements to the stack
+# pushing elements to the stack
 stack.append('a')
 stack.append('b')
 stack.append('c')
 
-#...Showing elements in stack
 print(f"Present stack: {stack}")
-
-
-#...Popping elements from the stack
+# popping elements from the stack
 print(f"Popping element 3: {stack.pop()}")
 print(f"Popping element 2: {stack.pop()}")
 print(f"Popping element 1: {stack.pop()}")
 
-#...Showing elements in stack
 print(f"Present stack: {stack}")
 
 ```
 
 It should be noted that the `Deque` library is employed here over the Python `List` Data structure as append operation begin to slow down once memory is full. This is due to dynamic memory allocation in python. The deque allows the append and pop operations to be performed at constant time `0(1)`. Another alternative way to implement this is to use the `Queue.LIFOQueue` from the `Queue` std library in Python.
 
-We could also implement a Stack Abstract Data Type in python
+```python
+from queue import LifoQueue
+stack = LifoQueue(maxsize=5)
+print(stack.qsize())
+stack.put('a')
+stack.put('b')
+stack.put('c')
+
+print(stack.get())
+print(stack.get())
+print(stack.get())
+
+print(stack.empty())
+print(stack.full())
+print(stack.qsize())
+```
+
+We could also implement a Stack Abstract Data Type in python as follows:
 ```python
 class Stack:
     def __init__(self):
@@ -63,3 +77,4 @@ class Stack:
     def size(self):
         return len(self.items)
 ```
+
