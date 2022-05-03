@@ -1,5 +1,6 @@
 # Week 1 - Grind75
 
+
 ## Stack
 Stack is a LIFO/FILO linear data structure which has insertion and deletion at one end of the data structure. The insertion and deletion operations are called push and pop respectively. 
 
@@ -8,6 +9,8 @@ The functions included with the stack are:
 - `top()`: Return the top most element of a stack
 - `push(element)`: Push an element to the end/top of a stack
 - `pop()`: Pop/Remove the element at the end/top of a stack
+- `peek()`: Return the item at the top of a stack but does not remove it
+- `size()`: Return the number of items in the stack
 
 It should be noted that all these operations are performed at constant time `0(1)`
 
@@ -38,3 +41,25 @@ print(f"Present stack: {stack}")
 ```
 
 It should be noted that the `Deque` library is employed here over the Python `List` Data structure as append operation begin to slow down once memory is full. This is due to dynamic memory allocation in python. The deque allows the append and pop operations to be performed at constant time `0(1)`. Another alternative way to implement this is to use the `Queue.LIFOQueue` from the `Queue` std library in Python.
+
+We could also implement a Stack Abstract Data Type in python
+```python
+class Stack:
+    def __init__(self):
+        self.items = []
+    
+    def is_empty(self):
+        return self.items == []
+
+    def push(self, item):
+        return self.items.append(item)
+
+    def pop(self):
+        return self.items.pop()
+
+    def peek(self):
+        return self.items[-1]
+    
+    def size(self):
+        return len(self.items)
+```
