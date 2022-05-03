@@ -22,17 +22,15 @@ There is limited memory allocated to a stack and checks should be done to be sur
 ```python
 import collections.deque as deque
 stack = deque()
-# pushing elements to the stack
+
 stack.append('a')
 stack.append('b')
 stack.append('c')
 
 print(f"Present stack: {stack}")
-# popping elements from the stack
 print(f"Popping element 3: {stack.pop()}")
 print(f"Popping element 2: {stack.pop()}")
 print(f"Popping element 1: {stack.pop()}")
-
 print(f"Present stack: {stack}")
 
 ```
@@ -43,6 +41,7 @@ It should be noted that the `Deque` library is employed here over the Python `Li
 from queue import LifoQueue
 stack = LifoQueue(maxsize=5)
 print(stack.qsize())
+
 stack.put('a')
 stack.put('b')
 stack.put('c')
