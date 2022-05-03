@@ -77,3 +77,26 @@ class Stack:
         return len(self.items)
 ```
 
+## Self Checks
+- Given the following sequence of stack operations, what is the top item on the stack when the sequence is complete?
+    ```python
+    m = Stack()
+    m.push('x')
+    m.push('y')
+    m.pop()
+    m.push('z')
+    m.peek()
+    ```
+
+- Given the following sequence of stack operations, what is the top item on the stack when the sequence is complete?
+    ```python
+    m = Stack()
+    m.push('x')
+    m.push('y')
+    m.push('z')
+    while not m.is_empty():
+    m.pop()
+    m.pop()
+    ```
+
+- Write a function `rev_string(myStr)` that uses a stack to reverse a string
