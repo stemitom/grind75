@@ -95,8 +95,8 @@ class Stack:
     m.push('y')
     m.push('z')
     while not m.is_empty():
-    m.pop()
-    m.pop()
+        m.pop()
+        m.pop()
     ```
 
 - Write a function `rev_string(myStr)` that uses a stack to reverse a string
