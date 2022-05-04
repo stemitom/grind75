@@ -56,3 +56,6 @@ class Solution:
 print(Solution.isValid("()[]{}"))
 print(Solution.isValid("(]"))
 print(Solution.isValid("]()"))
+print(Solution.isValid("())"))
+print(Solution.isValid("[[]("))
+print(Solution.isValid("(])"))
