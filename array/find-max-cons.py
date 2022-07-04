@@ -18,7 +18,6 @@ class Solution:
             return len(nums)
         # False, continues
 
-        print("Counting..")
         count = 0
         for i in range(len(locations)):
             if i == 0:
